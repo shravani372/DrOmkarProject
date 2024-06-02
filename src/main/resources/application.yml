@@ -1,0 +1,17 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: PMS
+    description: PMS
+spring:
+  profiles:
+    active: prod
