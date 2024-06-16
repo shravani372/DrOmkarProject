@@ -38,8 +38,8 @@ public class CaseHistoryServiceImpl implements CaseHistoryService{
 	}
 
 	@Override
-	public CaseHistory updatePatientData(CaseHistory caseHistory, int patientid) {
-		CaseHistory byPatientId = caseHistoryRepository.findByPatientId(patientid);
+	public CaseHistory updatePatientData(CaseHistory caseHistory, int caseId) {
+		CaseHistory byPatientId = caseHistoryRepository.findByCaseId(caseId);
 		
 		CaseHistory patchData = Mapper.mapCaseHistory(caseHistory,byPatientId);
 		return caseHistoryRepository.save(patchData);

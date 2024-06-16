@@ -9,9 +9,9 @@ import com.patient.management.system.dto.CaseHistory;
 @Repository
 public interface CaseHistoryRepository extends JpaRepository<CaseHistory, Integer>{
 
-	@Query(nativeQuery = true, value ="update CaseHistory set  ")
-	CaseHistory updatePatientData();
+//	@Query(nativeQuery = true, value ="update CaseHistory set  ")
+//	CaseHistory updatePatientData();
 
-	CaseHistory findByPatientId(int patientid);
+	CaseHistory findByCaseId(long caseId);
 
 }
