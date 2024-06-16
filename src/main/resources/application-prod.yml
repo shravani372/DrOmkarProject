@@ -1,8 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${PROD_DB_HOST}:${PROD_DB_PORT}/${PROD_DB_NAME}
-    username: ${PROD_DB_USERNAME}
-    password: ${PROD_DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    username: postgres
+    password: root
     name: system
+  sql:
+    init:
+      mode: always
 spring.jpa:
-  hibernate.ddl-auto: create-drop
+  hibernate.ddl-auto: none
+  defer-datasource-initialization: true
